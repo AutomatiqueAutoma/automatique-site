@@ -322,6 +322,29 @@
         }
         .tech-item p { color: #b0d8d8; font-size: 0.95rem; }
 
+        /* PORTFOLIO */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        .portfolio-item {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+        .portfolio-item:hover {
+            border-color: var(--accent);
+            box-shadow: 0 20px 40px rgba(0,80,80,0.08);
+            transform: translateY(-4px);
+        }
+        .portfolio-item iframe {
+            border: none;
+            width: 100%;
+        }
+
         /* CONTACT */
         .contact-grid {
             display: grid;
@@ -476,6 +499,7 @@
         <ul>
             <li><a href="#servicos">Servi&ccedil;os</a></li>
             <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#portfolio">Portf&oacute;lio</a></li>
             <li><a href="#contato">Contato</a></li>
             <li><a href="https://wa.me/5516981453527" class="nav-cta" target="_blank">WhatsApp</a></li>
         </ul>
@@ -591,6 +615,33 @@
                     <p>Modbus TCP/RTU, Ethernet/IP, Serial</p>
                 </div>
             </div>
+        </div>
+    </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio" style="background: #fff;">
+    <div class="container">
+        <span class="section-label">Portf&oacute;lio</span>
+        <h2 class="section-title">Nossos Trabalhos</h2>
+        <p class="section-subtitle">Conhe&ccedil;a nossos projetos de automa&ccedil;&atilde;o industrial.</p>
+
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <iframe src="https://www.instagram.com/p/DFh4eDpMJDH/embed/" width="100%" height="400" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+            </div>
+            <div class="portfolio-item">
+                <iframe src="https://www.instagram.com/p/DGKbxKsMdHJ/embed/" width="100%" height="400" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+            </div>
+            <div class="portfolio-item">
+                <iframe src="https://www.instagram.com/p/DGFzC0Ps0eI/embed/" width="100%" height="400" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="https://instagram.com/The_Automatique" target="_blank" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+                &#128248; Ver mais no Instagram
+            </a>
         </div>
     </div>
 </section>
