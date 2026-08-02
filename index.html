@@ -138,6 +138,11 @@
             height: 40px;
             width: auto;
         }
+        nav .logo-white {
+            height: 40px;
+            width: auto;
+            filter: brightness(0) invert(1);
+        }
         nav .logo-text {
             font-size: 1.5rem;
             font-weight: 800;
@@ -145,7 +150,7 @@
             text-decoration: none;
             letter-spacing: -0.5px;
         }
-        nav .logo-text span { color: var(--accent-light); }
+        nav .logo-text span { color: #fff; }
         nav ul {
             list-style: none;
             display: flex;
@@ -667,7 +672,9 @@
 <!-- NAV -->
 <nav id="navbar" aria-label="Menu principal">
     <div class="container">
-        <a href="#" class="logo-text" aria-label="Automatique - página inicial">Automat<span>ique</span></a>
+        <a href="#" aria-label="Automatique - página inicial" style="display:flex;align-items:center;text-decoration:none;">
+            <img src="logo-header.png" alt="Automatique" class="logo-white">
+        </a>
         <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir ou fechar menu" aria-expanded="false">&#9776;</button>
         <ul id="menu">
             <li><a href="#servicos">Servi&ccedil;os</a></li>
