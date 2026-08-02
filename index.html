@@ -71,7 +71,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -144,11 +144,14 @@
             filter: brightness(0) invert(1);
         }
         nav .logo-text {
-            font-size: 1.5rem;
-            font-weight: 800;
+            font-family: 'Rajdhani', 'Inter', sans-serif;
+            font-size: 1.55rem;
+            font-weight: 700;
             color: #fff;
             text-decoration: none;
-            letter-spacing: -0.5px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            line-height: 1.1;
         }
         nav .logo-text span { color: #fff; }
         nav ul {
@@ -642,6 +645,7 @@
             nav ul { display: none; }
             .menu-toggle { display: block; }
             nav .container { position: relative; }
+            nav .logo-text { font-size: 1.05rem; white-space: nowrap; }
             nav ul.open {
                 display: flex;
                 flex-direction: column;
@@ -672,9 +676,7 @@
 <!-- NAV -->
 <nav id="navbar" aria-label="Menu principal">
     <div class="container">
-        <a href="#" aria-label="Automatique - página inicial" style="display:flex;align-items:center;text-decoration:none;">
-            <img src="logo-header.png" alt="Automatique" class="logo-white">
-        </a>
+        <a href="#" class="logo-text" aria-label="Automatique - página inicial">Automatique Automa&ccedil;&atilde;o Industrial</a>
         <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir ou fechar menu" aria-expanded="false">&#9776;</button>
         <ul id="menu">
             <li><a href="#servicos">Servi&ccedil;os</a></li>
