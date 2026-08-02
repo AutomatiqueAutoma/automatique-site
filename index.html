@@ -8,7 +8,7 @@
     <meta name="keywords" content="automação industrial, robótica, PLC, cobot, robotização, Monte Alto, São Paulo, integração de máquinas, painéis e IHM">
     <meta name="author" content="Automatique Automação Industrial">
     <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#005050">
+    <meta name="theme-color" content="#004e56">
     <link rel="canonical" href="https://automatiqueautomacao.com.br/">
     <link rel="icon" type="image/png" sizes="256x256" href="logo-small.png">
     <link rel="apple-touch-icon" href="logo-small.png">
@@ -76,10 +76,11 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
-            --primary: #002020;
-            --accent: #005050;
-            --accent-light: #007878;
-            --accent-dark: #003838;
+            --primary: #003238;
+            --accent: #004e56;
+            --accent-light: #007078;
+            --accent-dark: #00383d;
+            --brand-soft: #80a7ab;
             --bg: #f0f7f7;
             --card: #ffffff;
             --text: #0a1e1e;
@@ -183,7 +184,7 @@
             min-height: 100vh;
             display: flex;
             align-items: center;
-            background: linear-gradient(135deg, #002020 0%, #004040 40%, #005858 70%, #002020 100%);
+            background: linear-gradient(135deg, #003238 0%, #004e56 40%, #00666f 70%, #003238 100%);
             position: relative;
             overflow: hidden;
             padding: 6rem 2rem 4rem;
@@ -195,7 +196,7 @@
             right: -20%;
             width: 700px;
             height: 700px;
-            background: radial-gradient(circle, rgba(0,80,80,0.2) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(128,167,171,0.15) 0%, transparent 70%);
             border-radius: 50%;
         }
         .hero::after {
@@ -205,9 +206,22 @@
             left: -10%;
             width: 500px;
             height: 500px;
-            background: radial-gradient(circle, rgba(0,120,120,0.1) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(128,167,171,0.1) 0%, transparent 70%);
             border-radius: 50%;
         }
+        .hero-watermark {
+            position: absolute;
+            top: 50%;
+            right: -10%;
+            transform: translateY(-50%);
+            width: 60vw;
+            max-width: 720px;
+            opacity: 0.07;
+            pointer-events: none;
+            z-index: 0;
+            filter: drop-shadow(0 0 60px rgba(0,0,0,0.3));
+        }
+        .hero-watermark img { width: 100%; height: auto; }
         .hero .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -386,7 +400,7 @@
             font-size: 1.1rem;
         }
         .about-visual {
-            background: linear-gradient(135deg, #002020, #005050);
+            background: linear-gradient(135deg, #003238, #004e56);
             border-radius: 20px;
             padding: 3rem;
             color: #fff;
@@ -640,6 +654,7 @@
             .hero-buttons { justify-content: center; }
             .hero-stats { justify-content: center; }
             .hero-stats { flex-direction: column; gap: 1.5rem; align-items: center; }
+            .hero-watermark { width: 90vw; right: -35%; top: 15%; transform: none; }
             .about-grid, .contact-grid { grid-template-columns: 1fr; }
             footer .container { flex-direction: column; text-align: center; }
         }
@@ -652,10 +667,7 @@
 <!-- NAV -->
 <nav id="navbar" aria-label="Menu principal">
     <div class="container">
-        <a href="#" style="display:flex;align-items:center;gap:0.75rem;text-decoration:none;" aria-label="Automatique - página inicial">
-            <img src="logo-small.png" alt="Logotipo Automatique" class="logo-img">
-            <span class="logo-text">Automat<span>ique</span></span>
-        </a>
+        <a href="#" class="logo-text" aria-label="Automatique - página inicial">Automat<span>ique</span></a>
         <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir ou fechar menu" aria-expanded="false">&#9776;</button>
         <ul id="menu">
             <li><a href="#servicos">Servi&ccedil;os</a></li>
@@ -669,6 +681,9 @@
 
 <!-- HERO -->
 <section class="hero" aria-label="Destaque">
+    <div class="hero-watermark" aria-hidden="true">
+        <img src="logo.png" alt="" loading="eager">
+    </div>
     <div class="container">
         <div>
             <span class="hero-badge">Automa&ccedil;&atilde;o Industrial em Monte Alto - SP</span>
@@ -680,7 +695,7 @@
             </div>
             <div class="hero-stats">
                 <div class="stat">
-                    <h3>7+</h3>
+                    <h3>10+</h3>
                     <p>Anos de Experi&ecirc;ncia</p>
                 </div>
                 <div class="stat">
