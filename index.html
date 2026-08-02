@@ -3,10 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Automatique - Automação Industrial</title>
-    <meta name="description" content="Automatique Automa&ccedil;&atilde;o Industrial - Solu&ccedil;&otilde;es em automa&ccedil;&atilde;o, rob&oacute;tica e controle de m&aacute;quinas industriais. Monte Alto - SP.">
-    <meta name="keywords" content="automa&ccedil;&atilde;o industrial, rob&oacute;tica, PLC, cobot, Monte Alto, S&atilde;o Paulo">
+    <title>Automatique Automação Industrial | Soluções em Robótica e PLC</title>
+    <meta name="description" content="Automatique Automação Industrial - Soluções em automação, robótica colaborativa, programação de PLCs e controle de máquinas industriais. Monte Alto - SP. Orçamento via WhatsApp.">
+    <meta name="keywords" content="automação industrial, robótica, PLC, cobot, robotização, Monte Alto, São Paulo, integração de máquinas, painéis e IHM">
+    <meta name="author" content="Automatique Automação Industrial">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#005050">
+    <link rel="canonical" href="https://automatiqueautomacao.com.br/">
+    <link rel="icon" type="image/png" sizes="256x256" href="logo-small.png">
+    <link rel="apple-touch-icon" href="logo-small.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Automatique Automação Industrial">
+    <meta property="og:title" content="Automatique Automação Industrial | Soluções em Automação e Robótica">
+    <meta property="og:description" content="Projetamos e implementamos sistemas inteligentes para controle de máquinas, robótica colaborativa e automação de processos industriais. Monte Alto - SP.">
+    <meta property="og:url" content="https://automatiqueautomacao.com.br/">
+    <meta property="og:image" content="https://automatiqueautomacao.com.br/logo.png">    <meta property="og:locale" content="pt_BR">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Automatique Automação Industrial | Soluções em Automação e Robótica">
+    <meta name="twitter:description" content="Automação industrial, robótica colaborativa, programação de PLCs e integração de máquinas. Monte Alto - SP.">
+    <meta name="twitter:image" content="https://automatiqueautomacao.com.br/logo.png">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Automatique Automação Industrial",
+        "alternateName": "Automatique",
+        "description": "Soluções em automação industrial, robótica colaborativa, programação de PLCs e integração de máquinas.",
+        "url": "https://automatiqueautomacao.com.br/",
+        "logo": "https://automatiqueautomacao.com.br/logo.png",
+        "image": "https://automatiqueautomacao.com.br/logo.png",
+        "email": "automatique@automatiqueautomacao.com.br",
+        "telephone": "+5516981453527",
+        "vatID": "31.878.288/0001-25",
+        "foundingDate": "2018",
+        "priceRange": "$$",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Monte Alto",
+            "addressRegion": "SP",
+            "addressCountry": "BR"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+5516981453527",
+            "contactType": "sales",
+            "availableLanguage": ["Portuguese", "English"]
+        },
+        "sameAs": [
+            "https://www.instagram.com/The_Automatique",
+            "https://github.com/AutomatiqueAutoma/automatique-site"
+        ],
+        "makesOffer": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Robótica Colaborativa" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Programação de PLCs" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Integração de Máquinas" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Painéis e IHM" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Suporte Técnico" } }
+        ]
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -23,12 +87,30 @@
             --border: #c0dede;
         }
 
+        html { scroll-behavior: smooth; }
+
         body {
             font-family: 'Inter', -apple-system, sans-serif;
             background: var(--bg);
             color: var(--text);
             line-height: 1.6;
         }
+
+        /* Accessibility */
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: 0;
+            background: var(--accent);
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0 0 8px 0;
+            z-index: 2000;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .skip-link:focus { left: 0; }
+        :focus-visible { outline: 3px solid var(--accent-light); outline-offset: 2px; }
 
         /* NAV */
         nav {
@@ -40,7 +122,9 @@
             z-index: 1000;
             padding: 0 2rem;
             border-bottom: 1px solid rgba(0,80,80,0.2);
+            transition: box-shadow 0.3s;
         }
+        nav.scrolled { box-shadow: 0 6px 30px rgba(0,0,0,0.3); }
         nav .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -65,6 +149,7 @@
             list-style: none;
             display: flex;
             gap: 2rem;
+            align-items: center;
         }
         nav ul a {
             color: #94c8c8;
@@ -90,6 +175,7 @@
             color: #fff;
             font-size: 1.5rem;
             cursor: pointer;
+            padding: 0.5rem;
         }
 
         /* HERO */
@@ -128,7 +214,6 @@
             position: relative;
             z-index: 1;
         }
-        .hero-content { }
         .hero-badge {
             display: inline-block;
             background: rgba(0,80,80,0.15);
@@ -165,6 +250,7 @@
             transition: all 0.3s;
             cursor: pointer;
             border: none;
+            display: inline-block;
         }
         .btn-primary { background: var(--accent); color: #fff; }
         .btn-primary:hover { background: var(--accent-light); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,80,80,0.3); }
@@ -209,6 +295,18 @@
             font-size: 1.1rem;
             max-width: 600px;
             margin-bottom: 3rem;
+        }
+
+        /* Reveal animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        .reveal.visible { opacity: 1; transform: none; }
+        @media (prefers-reduced-motion: reduce) {
+            .reveal { opacity: 1; transform: none; transition: none; }
+            html { scroll-behavior: auto; }
         }
 
         /* SERVICES */
@@ -311,6 +409,35 @@
         }
         .tech-item p { color: #b0d8d8; font-size: 0.95rem; }
 
+        /* PROCESS */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+        }
+        .process-step {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+            position: relative;
+            transition: all 0.3s;
+        }
+        .process-step:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0,80,80,0.08);
+        }
+        .process-num {
+            font-size: 0.85rem;
+            font-weight: 800;
+            color: var(--accent-light);
+            letter-spacing: 1px;
+            margin-bottom: 0.75rem;
+        }
+        .process-step h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .process-step p { color: var(--text-muted); font-size: 0.95rem; }
+
         /* PORTFOLIO */
         .portfolio-grid {
             display: grid;
@@ -323,6 +450,8 @@
             border-radius: 16px;
             overflow: hidden;
             transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
         }
         .portfolio-item:hover {
             border-color: var(--accent);
@@ -332,6 +461,48 @@
         .portfolio-item iframe {
             border: none;
             width: 100%;
+            display: block;
+        }
+        .portfolio-item p {
+            padding: 1rem 1.25rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* FAQ */
+        .faq-list { max-width: 800px; margin: 0 auto; }
+        .faq-item {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+        .faq-item summary {
+            padding: 1.25rem 1.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            transition: color 0.3s;
+        }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary::after {
+            content: "+";
+            font-size: 1.5rem;
+            color: var(--accent);
+            font-weight: 400;
+            transition: transform 0.3s;
+        }
+        .faq-item[open] summary { color: var(--accent); }
+        .faq-item[open] summary::after { transform: rotate(45deg); }
+        .faq-item p {
+            padding: 0 1.5rem 1.5rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
         }
 
         /* CONTACT */
@@ -476,28 +647,30 @@
 </head>
 <body>
 
+<a href="#main" class="skip-link">Pular para o conteúdo</a>
+
 <!-- NAV -->
-<nav>
+<nav id="navbar" aria-label="Menu principal">
     <div class="container">
-        <a href="#" style="display:flex;align-items:center;gap:0.75rem;text-decoration:none;">
-            <img src="logo.png" alt="Automatique" class="logo-img">
+        <a href="#" style="display:flex;align-items:center;gap:0.75rem;text-decoration:none;" aria-label="Automatique - página inicial">
+            <img src="logo-small.png" alt="Logotipo Automatique" class="logo-img">
             <span class="logo-text">Automat<span>ique</span></span>
         </a>
-        <button class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('open')">&#9776;</button>
-        <ul>
+        <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir ou fechar menu" aria-expanded="false">&#9776;</button>
+        <ul id="menu">
             <li><a href="#servicos">Servi&ccedil;os</a></li>
             <li><a href="#sobre">Sobre</a></li>
             <li><a href="#portfolio">Portf&oacute;lio</a></li>
             <li><a href="#contato">Contato</a></li>
-            <li><a href="https://wa.me/5516981453527" class="nav-cta" target="_blank">WhatsApp</a></li>
+            <li><a href="https://wa.me/5516981453527" class="nav-cta" target="_blank" rel="noopener">WhatsApp</a></li>
         </ul>
     </div>
 </nav>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero" aria-label="Destaque">
     <div class="container">
-        <div class="hero-content">
+        <div>
             <span class="hero-badge">Automa&ccedil;&atilde;o Industrial em Monte Alto - SP</span>
             <h1>Solu&ccedil;&otilde;es em <span>Automa&ccedil;&atilde;o</span> Industrial</h1>
             <p>Projetamos e implementamos sistemas inteligentes para controle de m&aacute;quinas, rob&oacute;tica colaborativa e automa&ccedil;&atilde;o de processos industriais.</p>
@@ -523,6 +696,8 @@
     </div>
 </section>
 
+<main id="main">
+
 <!-- SERVICES -->
 <section id="servicos">
     <div class="container">
@@ -531,28 +706,28 @@
         <p class="section-subtitle">Da concep&ccedil;&atilde;o &agrave; implementa&ccedil;&atilde;o, com suporte t&eacute;cnico cont&iacute;nuo.</p>
 
         <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon">&#129302;</div>
+            <div class="service-card reveal">
+                <div class="service-icon" aria-hidden="true">&#129302;</div>
                 <h3>Rob&oacute;tica Colaborativa</h3>
                 <p>Programa&ccedil;&atilde;o e integra&ccedil;&atilde;o de cobots para pick-and-place, solda, paletiza&ccedil;&atilde;o e processos repetitivos. Integrados com PLCs via Modbus TCP/RTU.</p>
             </div>
-            <div class="service-card">
-                <div class="service-icon">&#9889;</div>
+            <div class="service-card reveal">
+                <div class="service-icon" aria-hidden="true">&#9889;</div>
                 <h3>PLCs e Automa&ccedil;&atilde;o</h3>
                 <p>Programa&ccedil;&atilde;o de PLCs Allen-Bradley, Siemens e Mitsubishi. L&oacute;gica ladder, Modbus, comunica&ccedil;&atilde;o serial e rede industrial.</p>
             </div>
-            <div class="service-card">
-                <div class="service-icon">&#127981;</div>
+            <div class="service-card reveal">
+                <div class="service-icon" aria-hidden="true">&#127981;</div>
                 <h3>Integra&ccedil;&atilde;o de M&aacute;quinas</h3>
                 <p>Conex&atilde;o entre CNC, centros de usinagem e sistemas de controle. Protocolos Modbus, Ethernet/IP e serial.</p>
             </div>
-            <div class="service-card">
-                <div class="service-icon">&#128202;</div>
+            <div class="service-card reveal">
+                <div class="service-icon" aria-hidden="true">&#128202;</div>
                 <h3>Pain&eacute;is e IHM</h3>
                 <p>Desenvolvimento de interfaces homem-m&aacute;quina para controle e visualiza&ccedil;&atilde;o de processos industriais.</p>
             </div>
-            <div class="service-card">
-                <div class="service-icon">&#128295;</div>
+            <div class="service-card reveal">
+                <div class="service-icon" aria-hidden="true">&#128295;</div>
                 <h3>Suporte T&eacute;cnico</h3>
                 <p>Manuten&ccedil;&atilde;o preventiva e corretiva de sistemas automatizados. Atendimento remoto e presencial.</p>
             </div>
@@ -564,7 +739,7 @@
 <section id="sobre" style="background: #fff;">
     <div class="container">
         <div class="about-grid">
-            <div class="about-text">
+            <div class="about-text reveal">
                 <span class="section-label">Sobre N&oacute;s</span>
                 <h2>Automa&ccedil;&atilde;o industrial com foco em resultado</h2>
                 <p>A <strong>Automatique Automa&ccedil;&atilde;o Industrial</strong> atua desde 2018 no segmento de instala&ccedil;&atilde;o de m&aacute;quinas e equipamentos industriais, com foco em solu&ccedil;&otilde;es de automa&ccedil;&atilde;o e rob&oacute;tica.</p>
@@ -577,7 +752,7 @@
                     <li>Atendimento em toda a regi&atilde;o de S&atilde;o Paulo</li>
                 </ul>
             </div>
-            <div class="about-visual">
+            <div class="about-visual reveal">
                 <div class="tech-item">
                     <h4>PLCs</h4>
                     <p>Allen-Bradley MicroLogix, SLC 500, ControlLogix</p>
@@ -595,6 +770,38 @@
     </div>
 </section>
 
+<!-- PROCESS -->
+<section id="processo">
+    <div class="container">
+        <span class="section-label">Como Trabalhamos</span>
+        <h2 class="section-title">Do diagn&oacute;stico ao startup</h2>
+        <p class="section-subtitle">Um processo claro para reduzir paradas e aumentar a produtividade.</p>
+
+        <div class="process-grid">
+            <div class="process-step reveal">
+                <div class="process-num">01 &mdash; Diagn&oacute;stico</div>
+                <h3>Levantamento</h3>
+                <p>Visita t&eacute;cnica e an&aacute;lise do processo para identificar gargalos e oportunidades de automa&ccedil;&atilde;o.</p>
+            </div>
+            <div class="process-step reveal">
+                <div class="process-num">02 &mdash; Projeto</div>
+                <h3>Solu&ccedil;&atilde;o sob medida</h3>
+                <p>Desenvolvimento de projeto el&eacute;trico, l&oacute;gica de controle e defini&ccedil;&atilde;o dos equipamentos adequados.</p>
+            </div>
+            <div class="process-step reveal">
+                <div class="process-num">03 &mdash; Implementa&ccedil;&atilde;o</div>
+                <h3>Integra&ccedil;&atilde;o e comissionamento</h3>
+                <p>Instala&ccedil;&atilde;o, programa&ccedil;&atilde;o e integra&ccedil;&atilde;o com m&aacute;quinas e PLCs at&eacute; o pleno funcionamento.</p>
+            </div>
+            <div class="process-step reveal">
+                <div class="process-num">04 &mdash; Suporte</div>
+                <h3>Acompanhamento cont&iacute;nuo</h3>
+                <p>Suporte t&eacute;cnico remoto e presencial para garantir opera&ccedil;&atilde;o est&aacute;vel e evolu&ccedil;&atilde;o do sistema.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- PORTFOLIO -->
 <section id="portfolio" style="background: #fff;">
     <div class="container">
@@ -602,28 +809,62 @@
         <h2 class="section-title">Nossos Trabalhos</h2>
         <p class="section-subtitle">Conhe&ccedil;a nossos projetos de automa&ccedil;&atilde;o industrial.</p>
 
+        <!--
+            COMO TROCAR OS POSTS DO PORTFÓLIO:
+            Substitua o valor de "src" nos iframes abaixo pelos links reais dos seus posts/reels.
+            O formato é: https://www.instagram.com/p/CODIGO_DO_POST/embed/ ou
+            https://www.instagram.com/reel/CODIGO_DO_REEL/embed/
+        -->
         <div class="portfolio-grid">
-            <div class="portfolio-item">
-                <iframe src="https://www.instagram.com/p/DFh4eDpMJDH/embed/" width="100%" height="400" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+            <div class="portfolio-item reveal">
+                <iframe src="https://www.instagram.com/p/DFh4eDpMJDH/embed/" width="100%" height="400" frameborder="0" scrolling="no" allowtransparency="true" loading="lazy" title="Publicação no Instagram"></iframe>
             </div>
-            <div class="portfolio-item">
-                <iframe src="https://www.instagram.com/p/DGKbxKsMdHJ/embed/" width="100%" height="400" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+            <div class="portfolio-item reveal">
+                <iframe src="https://www.instagram.com/p/DGKbxKsMdHJ/embed/" width="100%" height="400" frameborder="0" scrolling="no" allowtransparency="true" loading="lazy" title="Publicação no Instagram"></iframe>
             </div>
-            <div class="portfolio-item">
-                <iframe src="https://www.instagram.com/p/DGFzC0Ps0eI/embed/" width="100%" height="400" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+            <div class="portfolio-item reveal">
+                <iframe src="https://www.instagram.com/p/DGFzC0Ps0eI/embed/" width="100%" height="400" frameborder="0" scrolling="no" allowtransparency="true" loading="lazy" title="Publicação no Instagram"></iframe>
             </div>
         </div>
 
         <div style="text-align: center; margin-top: 2rem;">
-            <a href="https://instagram.com/The_Automatique" target="_blank" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+            <a href="https://instagram.com/The_Automatique" target="_blank" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 0.5rem;" rel="noopener">
                 &#128248; Ver mais no Instagram
             </a>
         </div>
     </div>
 </section>
 
+<!-- FAQ -->
+<section id="faq">
+    <div class="container">
+        <span class="section-label">D&uacute;vidas Frequentes</span>
+        <h2 class="section-title">Perguntas e respostas</h2>
+        <p class="section-subtitle">Tire as principais d&uacute;vidas antes de come&ccedil;ar seu projeto.</p>
+
+        <div class="faq-list">
+            <details class="faq-item">
+                <summary>Voc&ecirc;s atendem empresas de qualquer porte?</summary>
+                <p>Sim. Atendemos desde pequenas oficinas at&eacute; grandes ind&uacute;strias, adaptando o projeto ao seu or&ccedil;amento e necessidade.</p>
+            </details>
+            <details class="faq-item">
+                <summary>O que &eacute; um rob&ocirc; colaborativo (cobot)?</summary>
+                <p>&Eacute; um rob&ocirc; projetado para trabalhar em seguran&ccedil;a ao lado de pessoas, ideal para tarefas repetitivas como pick-and-place, solda e paletiza&ccedil;&atilde;o.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Quanto tempo leva para automatizar uma m&aacute;quina?</summary>
+                <p>Depende da complexidade. Projetos menores podem ser entregues em semanas; integra&ccedil;&otilde;es completas com cobots levam de 1 a 3 meses.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Voc&ecirc;s fazem suporte ap&oacute;s a entrega?</summary>
+                <p>Sim. Todo projeto inclui suporte t&eacute;cnico cont&iacute;nuo, com atendimento remoto e presencial na regi&atilde;o de S&atilde;o Paulo.</p>
+            </details>
+        </div>
+    </div>
+</section>
+
 <!-- CONTACT -->
-<section id="contato">
+<section id="contato" style="background: #fff;">
     <div class="container">
         <span class="section-label">Contato</span>
         <h2 class="section-title">Vamos conversar?</h2>
@@ -632,50 +873,50 @@
         <div class="contact-grid">
             <div class="contact-info">
                 <div class="contact-item">
-                    <div class="contact-icon">&#128205;</div>
+                    <div class="contact-icon" aria-hidden="true">&#128205;</div>
                     <div>
                         <h4>Localiza&ccedil;&atilde;o</h4>
                         <p>Monte Alto - SP</p>
                     </div>
                 </div>
                 <div class="contact-item">
-                    <div class="contact-icon">&#128231;</div>
+                    <div class="contact-icon" aria-hidden="true">&#128231;</div>
                     <div>
                         <h4>E-mail</h4>
                         <p><a href="mailto:automatique@automatiqueautomacao.com.br">automatique@automatiqueautomacao.com.br</a></p>
                     </div>
                 </div>
                 <div class="contact-item">
-                    <div class="contact-icon">&#128172;</div>
+                    <div class="contact-icon" aria-hidden="true">&#128172;</div>
                     <div>
                         <h4>WhatsApp</h4>
-                        <p><a href="https://wa.me/5516981453527" target="_blank">(16) 98145-3527</a></p>
+                        <p><a href="https://wa.me/5516981453527" target="_blank" rel="noopener">(16) 98145-3527</a></p>
                     </div>
                 </div>
                 <div class="contact-item">
-                    <div class="contact-icon">&#128248;</div>
+                    <div class="contact-icon" aria-hidden="true">&#128248;</div>
                     <div>
                         <h4>Instagram</h4>
-                        <p><a href="https://instagram.com/The_Automatique" target="_blank">@The_Automatique</a></p>
+                        <p><a href="https://instagram.com/The_Automatique" target="_blank" rel="noopener">@The_Automatique</a></p>
                     </div>
                 </div>
             </div>
 
             <form class="contact-form" onsubmit="enviarWhatsApp(event)">
                 <div class="form-group">
-                    <label>Nome</label>
+                    <label for="nome">Nome</label>
                     <input type="text" id="nome" placeholder="Seu nome" required>
                 </div>
                 <div class="form-group">
-                    <label>E-mail</label>
+                    <label for="email">E-mail</label>
                     <input type="email" id="email" placeholder="seu@email.com" required>
                 </div>
                 <div class="form-group">
-                    <label>Telefone / WhatsApp</label>
+                    <label for="telefone">Telefone / WhatsApp</label>
                     <input type="tel" id="telefone" placeholder="(00) 00000-0000">
                 </div>
                 <div class="form-group">
-                    <label>Mensagem</label>
+                    <label for="mensagem">Mensagem</label>
                     <textarea id="mensagem" placeholder="Descreva seu projeto ou necessidade..." required></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar via WhatsApp</button>
@@ -684,19 +925,21 @@
     </div>
 </section>
 
+</main>
+
 <!-- FOOTER -->
 <footer>
     <div class="container">
-        <p class="copy">&copy; 2025 Automatique Automa&ccedil;&atilde;o Industrial. Todos os direitos reservados. CNPJ: 31.878.288/0001-25</p>
+        <p class="copy">&copy; 2026 Automatique Automa&ccedil;&atilde;o Industrial. Todos os direitos reservados. CNPJ: 31.878.288/0001-25</p>
         <div class="socials">
-            <a href="https://instagram.com/The_Automatique" target="_blank">Instagram</a>
-            <a href="https://wa.me/5516981453527" target="_blank">WhatsApp</a>
+            <a href="https://instagram.com/The_Automatique" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://wa.me/5516981453527" target="_blank" rel="noopener">WhatsApp</a>
         </div>
     </div>
 </footer>
 
 <!-- WHATSAPP FAB -->
-<a href="https://wa.me/5516981453527" class="whatsapp-fab" target="_blank" title="WhatsApp">&#128172;</a>
+<a href="https://wa.me/5516981453527" class="whatsapp-fab" target="_blank" rel="noopener" title="Fale conosco no WhatsApp" aria-label="Fale conosco no WhatsApp">&#128172;</a>
 
 <script>
     function enviarWhatsApp(e) {
@@ -706,8 +949,41 @@
         var tel = document.getElementById('telefone').value;
         var msg = document.getElementById('mensagem').value;
         var texto = encodeURIComponent("Ol\u00e1! Sou " + nome + ".\n\nE-mail: " + email + "\nTelefone: " + tel + "\n\nMensagem: " + msg);
-        window.open("https://wa.me/5516981453527?text=" + texto, "_blank");
+        window.open("https://wa.me/5516981453527?text=" + texto, "_blank", "noopener");
     }
+
+    function toggleMenu() {
+        var menu = document.getElementById('menu');
+        var btn = document.querySelector('.menu-toggle');
+        var open = menu.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open);
+    }
+
+    document.querySelectorAll('#menu a').forEach(function (link) {
+        link.addEventListener('click', function () {
+            var menu = document.getElementById('menu');
+            if (menu.classList.contains('open')) {
+                menu.classList.remove('open');
+                document.querySelector('.menu-toggle').setAttribute('aria-expanded', 'false');
+            }
+        });
+    });
+
+    window.addEventListener('scroll', function () {
+        var nav = document.getElementById('navbar');
+        if (window.scrollY > 10) { nav.classList.add('scrolled'); } else { nav.classList.remove('scrolled'); }
+    });
+
+    var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(function (el) { observer.observe(el); });
 </script>
 
 </body>

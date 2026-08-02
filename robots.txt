@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /instagram.com/
+
+Sitemap: https://automatiqueautomacao.com.br/sitemap.xml
