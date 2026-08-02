@@ -212,14 +212,14 @@
         .hero-watermark {
             position: absolute;
             top: 50%;
-            right: -10%;
-            transform: translateY(-50%);
-            width: 60vw;
-            max-width: 720px;
-            opacity: 0.07;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70vw;
+            max-width: 900px;
+            opacity: 0.12;
             pointer-events: none;
             z-index: 0;
-            filter: drop-shadow(0 0 60px rgba(0,0,0,0.3));
+            filter: drop-shadow(0 0 80px rgba(0,0,0,0.35));
         }
         .hero-watermark img { width: 100%; height: auto; }
         .hero .container {
@@ -654,7 +654,7 @@
             .hero-buttons { justify-content: center; }
             .hero-stats { justify-content: center; }
             .hero-stats { flex-direction: column; gap: 1.5rem; align-items: center; }
-            .hero-watermark { width: 90vw; right: -35%; top: 15%; transform: none; }
+            .hero-watermark { width: 100vw; max-width: 500px; top: 45%; left: 50%; transform: translate(-50%, -50%); }
             .about-grid, .contact-grid { grid-template-columns: 1fr; }
             footer .container { flex-direction: column; text-align: center; }
         }
